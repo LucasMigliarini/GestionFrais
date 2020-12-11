@@ -16,9 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
-Route::get('tables.blade.php', function () {
-    return view('tables');
-});
+Route::get('/showfrais/{value}', [\App\Http\Controllers\FraisController::class, 'show']);
 Route::get('index.blade.php', function () {
     return view('index');
 });

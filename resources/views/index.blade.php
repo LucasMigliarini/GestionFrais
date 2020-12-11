@@ -85,7 +85,7 @@
                             </li>
 
                             <li>
-                                <a href="http://localhost:8000/tables.blade.php"><i class="fa fa-table fa-fw"></i> Créer/Afficher</a>
+                                <a href="/showfrais/1"><i class="fa fa-table fa-fw"></i> Créer/Afficher</a>
                             </li>
                             <li>
                                 <a href="http://localhost:8000/tables.blade.php"><i class="fa fa-table fa-fw"></i> Valider/Afficher</a>

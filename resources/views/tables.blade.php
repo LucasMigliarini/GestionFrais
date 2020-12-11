@@ -116,22 +116,23 @@
                                         <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                             <thead>
                                                 <tr>
-                                                    <th>Rendering engine</th>
-                                                    <th>Browser</th>
-                                                    <th>Platform(s)</th>
-                                                    <th>Engine version</th>
-                                                    <th>CSS grade</th>
+                                                    <th>Date</th>
+                                                    <th>Quantite</th>
+                                                    <th>Quantite Validée</th>
+                                                    <th>Libelle</th>
+                                                    <th>Situation</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                            @foreach($remboursement->remboursmentFraisForfaitaire as $fraisforfaitaire)
                                                 <tr class="odd gradeX">
-                                                    <td>Trident</td>
-                                                    <td>Internet Explorer 4.0</td>
-                                                    <td>Win 95+</td>
-                                                    <td class="center">4</td>
-                                                    <td class="center">X</td>
+                                                    <td>{{$fraisforfaitaire->date}}</td>
+                                                    <td>{{$fraisforfaitaire->quantite}}</td>
+                                                    <td>{{$fraisforfaitaire->quantiteValide}}</td>
+                                                    <td>{{$fraisforfaitaire->Frais->libelle}}</td>
+                                                    <td>{{$remboursement->etat->libelle}}</td>
                                                 </tr>
-
+                                            @endforeach
                                             </tbody>
                                         </table>
                                     </div>
