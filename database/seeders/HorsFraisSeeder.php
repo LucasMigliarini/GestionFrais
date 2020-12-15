@@ -19,8 +19,8 @@ class HorsFraisSeeder extends Seeder
             'date' => '2020-02-10',
             'montant' => '450',
             'libelle' => 'Invitation client repas',
-            'montantValide' => '450',
             'rembCode' => '1',
+            'situation' => 'En attente',
         ]);
     }
 }

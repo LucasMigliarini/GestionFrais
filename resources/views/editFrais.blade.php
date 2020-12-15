@@ -56,7 +56,7 @@
 
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                            <i class="fa fa-user fa-fw"></i> User <b class="caret"></b>
+                            <i class="fa fa-user fa-fw"></i> Utilisateur <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu dropdown-user">
                             <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Deconnexion</a>
@@ -85,10 +85,10 @@
                             </li>
 
                             <li>
-                                <a href="tables.blade.php"><i class="fa fa-table fa-fw"></i> Créer/Afficher</a>
+                                <a href="frais.blade.php"><i class="fa fa-table fa-fw"></i> Créer/Afficher</a>
                             </li>
                             <li>
-                                <a href="tables.blade.php"><i class="fa fa-table fa-fw"></i> Valider/Afficher</a>
+                                <a href="/showuser"><i class="fa fa-table fa-fw"></i> Valider/Afficher</a>
                             </li>
                         </ul>
                     </div>
@@ -99,7 +99,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-12">
-                            <h1 class="page-header">Tables</h1>
+                            <h1 class="page-header">Frais de {{$remboursement->User->name}}</h1>
                         </div>
                         <!-- /.col-lg-12 -->
                     </div>
@@ -108,28 +108,48 @@
                         <div class="col-lg-12">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    DataTables Advanced Tables
+                                    Frais Forfaitaires
+                                </div>
+                                <div class="mb-3">
+                                    <label for="formGroupExampleInput" class="form-label">Example label</label>
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="formGroupExampleInput2" class="form-label">Another label</label>
+                                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
+                                </div>
+                            </div>
+                            <!-- /.panel -->
+                        </div>
+                        <!-- /.col-lg-12 -->
+                    </div>
+
+
+                    <!-- /.row -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    Hors Frais
                                 </div>
                                 <!-- /.panel-heading -->
                                 <div class="panel-body">
                                     <div class="table-responsive">
                                         <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                             <thead>
-                                                <tr>
-                                                    <th>Date</th>
-                                                    <th>Quantite</th>
-                                                    <th>Quantite Validée</th>
-                                                    <th>Libelle</th>
-                                                    <th>Situation</th>
-                                                </tr>
+                                            <tr>
+                                                <th>Date</th>
+                                                <th>Montant</th>
+                                                <th>Libelle</th>
+                                                <th>Situation</th>
+                                            </tr>
                                             </thead>
                                             <tbody>
-                                            @foreach($remboursement->remboursmentFraisForfaitaire as $fraisforfaitaire)
+                                            @foreach($remboursement->remboursmentHorsFrais as $horsfrais)
                                                 <tr class="odd gradeX">
-                                                    <td>{{$fraisforfaitaire->date}}</td>
-                                                    <td>{{$fraisforfaitaire->quantite}}</td>
-                                                    <td>{{$fraisforfaitaire->quantiteValide}}</td>
-                                                    <td>{{$fraisforfaitaire->Frais->libelle}}</td>
+                                                    <td>{{$horsfrais->date}}</td>
+                                                    <td>{{$horsfrais->montant}}</td>
+                                                    <td>{{$horsfrais->libelle}}</td>
                                                     <td>{{$remboursement->etat->libelle}}</td>
                                                 </tr>
                                             @endforeach
@@ -143,7 +163,8 @@
                         </div>
                         <!-- /.col-lg-12 -->
                     </div>
-        </div>
+                </div>
+            </div>
         <!-- /#wrapper -->
 
         <!-- jQuery -->
@@ -156,7 +177,7 @@
         <script src="../js/metisMenu.min.js"></script>
 
         <!-- DataTables JavaScript -->
-        <script src="../js/dataTables/jquery.dataTables.min.js"></script>
+
         <script src="../js/dataTables/dataTables.bootstrap.min.js"></script>
 
         <!-- Custom Theme JavaScript -->

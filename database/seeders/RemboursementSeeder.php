@@ -34,5 +34,19 @@ class RemboursementSeeder extends Seeder
             'etatCode' => '3',
             'date' => '2020-05-05',
         ]);
+
+        DB::table('remboursement')->insert([
+            'id' => '4',
+            'utiMatricul' => '2',
+            'etatCode' => '1',
+            'date' => '2020-07-05',
+        ]);
+
+        DB::table('remboursement')->insert([
+            'id' => '5',
+            'utiMatricul' => '3',
+            'etatCode' => '1',
+            'date' => '2020-01-25',
+        ]);
     }
 }

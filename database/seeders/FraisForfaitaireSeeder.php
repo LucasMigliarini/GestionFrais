@@ -18,18 +18,45 @@ class FraisForfaitaireSeeder extends Seeder
             'id' => '1',
             'date' => '2020-05-15',
             'quantite' => '450',
-            'quantiteValide' => '450',
             'fraisCode' => '1',
             'rembCode' => '1',
+            'situation' => 'En attente',
         ]);
 
         DB::table('fraisforfaitaire')->insert([
             'id' => '2',
             'date' => '2020-04-05',
             'quantite' => '50',
-            'quantiteValide' => '50',
             'fraisCode' => '2',
             'rembCode' => '2',
+            'situation' => 'En attente',
+        ]);
+
+        DB::table('fraisforfaitaire')->insert([
+            'id' => '3',
+            'date' => '2020-01-25',
+            'quantite' => '450',
+            'fraisCode' => '3',
+            'rembCode' => '4',
+            'situation' => 'En attente',
+        ]);
+
+        DB::table('fraisforfaitaire')->insert([
+            'id' => '4',
+            'date' => '2020-01-26',
+            'quantite' => '450',
+            'fraisCode' => '1',
+            'rembCode' => '4',
+            'situation' => 'En attente',
+        ]);
+
+        DB::table('fraisforfaitaire')->insert([
+            'id' => '5',
+            'date' => '2020-06-05',
+            'quantite' => '450',
+            'fraisCode' => '1',
+            'rembCode' => '5',
+            'situation' => 'En attente',
         ]);
     }
 }

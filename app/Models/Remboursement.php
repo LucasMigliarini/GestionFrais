@@ -11,7 +11,7 @@ class Remboursement extends Model
     protected $table = 'remboursement';
     protected $primaryKey = 'id';
 
-    public function remboursmentFraisForfaitaire()
+    public function remboursementFraisForfaitaire()
     {
         return $this->hasMany('App\Models\Fraisforfaitaire', 'id');
 
@@ -26,6 +26,12 @@ class Remboursement extends Model
     public function etat()
     {
         return $this->hasOne('App\Models\EtatFiche', 'id','etatCode');
+
+    }
+
+    public function user()
+    {
+        return $this->hasOne('App\Models\User', 'id','utiMatricul');
 
     }
 }

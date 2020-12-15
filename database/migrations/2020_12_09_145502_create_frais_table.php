@@ -16,7 +16,6 @@ class CreateFraisTable extends Migration
         Schema::create('frais', function (Blueprint $table) {
             $table->id();
             $table->string('libelle');
-            $table->double('montant');
         });
     }
 

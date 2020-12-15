@@ -21,5 +21,19 @@ class UsersSeeder extends Seeder
             'email' => Str::random(10).'@gmail.com',
             'password' => '123+aze',
         ]);
+
+        DB::table('users')->insert([
+            'id' => '2',
+            'name' => 'visitor1',
+            'email' => Str::random(10).'@gmail.com',
+            'password' => '123+aze',
+        ]);
+
+        DB::table('users')->insert([
+            'id' => '3',
+            'name' => 'visitor2',
+            'email' => Str::random(10).'@gmail.com',
+            'password' => '123+aze',
+        ]);
     }
 }

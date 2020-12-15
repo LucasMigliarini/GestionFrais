@@ -18,9 +18,9 @@ class CreateHorsfraisTable extends Migration
             $table->date('date');
             $table->float('montant');
             $table->string('libelle');
-            $table->float('montantValide');
             $table->unsignedBigInteger('rembCode');
             $table->foreign('rembCode')->references('id')->on('remboursement');
+            $table->string('situation');
         });
     }
 

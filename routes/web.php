@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
+Route::get('/showuser', [\App\Http\Controllers\ListeVisitorController::class, 'show']);
+Route::get('/showfiche/{value}', [\App\Http\Controllers\FicheController::class, 'show']);
 Route::get('/showfrais/{value}', [\App\Http\Controllers\FraisController::class, 'show']);
 Route::get('index.blade.php', function () {
     return view('index');
