@@ -5,10 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class HorsFrais extends Model
+class Permissions extends Model
 {
     use HasFactory;
-    protected $table = 'horsfrais';
+    protected $table = 'permissions';
     protected $primaryKey = 'id';
     public $timestamps = false;
 }

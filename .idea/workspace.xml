@@ -1,30 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d483989-2b58-4848-9ba1-ab8baf25fa69" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/FicheController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ListeVisitorController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Fiche.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/editFrais.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/frais.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Projet_Forfait.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Projet_Forfait.iml" afterDir="false" />
+    <list default="true" id="2d483989-2b58-4848-9ba1-ab8baf25fa69" name="Default Changelist" comment="Append FicheController,ListeVisitorController, editFrais, Fiche,Frais">
+      <change afterPath="$PROJECT_DIR$/app/Actions/Fortify/CreateNewUser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Actions/Fortify/PasswordValidationRules.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Actions/Fortify/ResetUserPassword.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Actions/Fortify/UpdateUserPassword.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Actions/Fortify/UpdateUserProfileInformation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/DefaultController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Permissions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Roles.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Providers/FortifyServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/fortify.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_200000_add_two_factor_columns_to_users_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_04_145036_create_permissions_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_04_145959_create_roles_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeders/PermissionsSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/editHorsFrais.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FraisController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FraisController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Fraisforfaitaire.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Fraisforfaitaire.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/HorsFrais.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/HorsFrais.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Remboursement.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Remboursement.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_09_145502_create_frais_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_09_145502_create_frais_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_09_145628_create_fraisforfaitaire_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_09_145628_create_fraisforfaitaire_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_09_145722_create_horsfrais_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_09_145722_create_horsfrais_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/FraisForfaitaireSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/FraisForfaitaireSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/FraisSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/FraisSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/HorsFraisSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/HorsFraisSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/RemboursementSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/RemboursementSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/UsersSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/UsersSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/editFrais.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/editFrais.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frais.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frais.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/tables.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ListeVisitor.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -222,13 +226,14 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/auth" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/auth" />
       <recent name="$PROJECT_DIR$/resources/views" />
       <recent name="$PROJECT_DIR$/database/migrations" />
     </key>
@@ -250,7 +255,12 @@
       <workItem from="1607519892296" duration="6143000" />
       <workItem from="1607689454188" duration="11636000" />
       <workItem from="1607946363638" duration="7984000" />
-      <workItem from="1608032997980" duration="6957000" />
+      <workItem from="1608032997980" duration="7634000" />
+      <workItem from="1608292930852" duration="8926000" />
+      <workItem from="1609245248499" duration="2958000" />
+      <workItem from="1609421720315" duration="3833000" />
+      <workItem from="1609762022636" duration="12837000" />
+      <workItem from="1609848038995" duration="351000" />
     </task>
     <task id="LOCAL-00001" summary="Append default">
       <created>1607697080321</created>
@@ -280,7 +290,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607702306261</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Append FicheController,ListeVisitorController, editFrais, Fiche,Frais">
+      <created>1608040166894</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1608040166894</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,7 +307,8 @@
     <MESSAGE value="Append default" />
     <MESSAGE value="Append change" />
     <MESSAGE value="Append FraisController" />
-    <option name="LAST_COMMIT_MESSAGE" value="Append FraisController" />
+    <MESSAGE value="Append FicheController,ListeVisitorController, editFrais, Fiche,Frais" />
+    <option name="LAST_COMMIT_MESSAGE" value="Append FicheController,ListeVisitorController, editFrais, Fiche,Frais" />
   </component>
   <component name="WindowStateProjectService">
     <state x="97" y="107" width="1084" height="726" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607701363133">
@@ -302,15 +320,16 @@
     </state>
     <state x="347" y="133" width="584" height="641" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.27.1278.845@0.27.1278.845" timestamp="1607700967262" />
     <state x="347" y="133" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.27.1278.846@0.27.1278.846" timestamp="1608034974943" />
-    <state x="372" y="207" width="534" height="488" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1608034997483">
+    <state x="372" y="207" width="534" height="488" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609773140282">
       <screen x="0" y="27" width="1278" height="846" />
     </state>
     <state x="372" y="207" width="534" height="488" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1278.845@0.27.1278.845" timestamp="1607700248534" />
-    <state x="372" y="207" width="534" height="488" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1278.846@0.27.1278.846" timestamp="1608034997483" />
-    <state x="183" y="27" key="CommitChangelistDialog2" timestamp="1607702306106">
-      <screen x="0" y="27" width="1278" height="845" />
+    <state x="372" y="207" width="534" height="488" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1278.846@0.27.1278.846" timestamp="1609773140282" />
+    <state x="183" y="27" key="CommitChangelistDialog2" timestamp="1609771852055">
+      <screen x="0" y="27" width="1278" height="846" />
     </state>
     <state x="183" y="27" key="CommitChangelistDialog2/0.27.1278.845@0.27.1278.845" timestamp="1607702306106" />
+    <state x="183" y="27" key="CommitChangelistDialog2/0.27.1278.846@0.27.1278.846" timestamp="1609771852055" />
     <state x="422" y="208" width="434" height="488" key="FileChooserDialogImpl" timestamp="1607958958280">
       <screen x="0" y="27" width="1278" height="846" />
     </state>
@@ -324,13 +343,19 @@
       <screen x="0" y="27" width="1278" height="846" />
     </state>
     <state x="269" y="256" width="783" height="554" key="NewPhpClassDialog/0.27.1278.846@0.27.1278.846" timestamp="1607525451432" />
-    <state x="128" y="84" width="1022" height="734" key="SettingsEditor" timestamp="1607698626299">
-      <screen x="0" y="27" width="1278" height="845" />
+    <state x="436" y="376" width="405" height="152" key="NewPhpFileDialog" timestamp="1609765023895">
+      <screen x="0" y="27" width="1278" height="846" />
+    </state>
+    <state x="436" y="376" width="405" height="152" key="NewPhpFileDialog/0.27.1278.846@0.27.1278.846" timestamp="1609765023895" />
+    <state x="128" y="84" width="1022" height="734" key="SettingsEditor" timestamp="1609766610448">
+      <screen x="0" y="27" width="1278" height="846" />
     </state>
     <state x="128" y="84" width="1022" height="734" key="SettingsEditor/0.27.1278.845@0.27.1278.845" timestamp="1607698626299" />
-    <state x="234" y="185" width="810" height="532" key="Vcs.Push.Dialog.v2" timestamp="1607702318348">
-      <screen x="0" y="27" width="1278" height="845" />
+    <state x="128" y="84" width="1022" height="734" key="SettingsEditor/0.27.1278.846@0.27.1278.846" timestamp="1609766610448" />
+    <state x="234" y="185" width="810" height="532" key="Vcs.Push.Dialog.v2" timestamp="1608040177212">
+      <screen x="0" y="27" width="1278" height="846" />
     </state>
     <state x="234" y="185" width="810" height="532" key="Vcs.Push.Dialog.v2/0.27.1278.845@0.27.1278.845" timestamp="1607702318348" />
+    <state x="234" y="185" key="Vcs.Push.Dialog.v2/0.27.1278.846@0.27.1278.846" timestamp="1608040177212" />
   </component>
 </project>

@@ -56,11 +56,15 @@
 
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                            <i class="fa fa-user fa-fw"></i> User <b class="caret"></b>
+                            <i class="fa fa-user fa-fw"></i> {{Auth::user()->name}} <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu dropdown-user">
-                            <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Deconnexion</a>
-                            </li>
+                            <form role="form" action="/logout" method="POST">
+                                @csrf
+                                <button type="submit" class="btn btn-primary">
+                                    deconexion
+                                </button>
+                            </form>
                         </ul>
                     </li>
                 </ul>
@@ -83,13 +87,16 @@
                             <li>
                                 <a href="index.blade.php" class="active"><i class="fa fa-dashboard fa-fw"></i> Acceuil</a>
                             </li>
-
+                            @if(Auth::roles()->Rusers == Auth::users()->id)
+                                @if(Auth::roles()->Rpermissions == "comptable")
                             <li>
                                 <a href="/showfrais/1"><i class="fa fa-table fa-fw"></i> Créer/Afficher</a>
                             </li>
                             <li>
-                                <a href="/showfiche"><i class="fa fa-table fa-fw"></i> Valider/Afficher</a>
+                                <a href="/showuser"><i class="fa fa-table fa-fw"></i> Valider/Afficher</a>
                             </li>
+                                @endif
+                            @endif
                         </ul>
                     </div>
                 </div>

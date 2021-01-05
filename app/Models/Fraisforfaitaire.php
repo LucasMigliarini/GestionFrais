@@ -10,6 +10,7 @@ class Fraisforfaitaire extends Model
     use HasFactory;
     protected $table = 'fraisforfaitaire';
     protected $primaryKey = 'id';
+    public $timestamps = false;
 
     public function frais()
     {
