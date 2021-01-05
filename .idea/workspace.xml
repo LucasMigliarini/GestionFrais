@@ -1,32 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d483989-2b58-4848-9ba1-ab8baf25fa69" name="Default Changelist" comment="Append FicheController,ListeVisitorController, editFrais, Fiche,Frais">
-      <change afterPath="$PROJECT_DIR$/app/Actions/Fortify/CreateNewUser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Actions/Fortify/PasswordValidationRules.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Actions/Fortify/ResetUserPassword.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Actions/Fortify/UpdateUserPassword.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Actions/Fortify/UpdateUserProfileInformation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/DefaultController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Permissions.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Roles.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Providers/FortifyServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/fortify.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_200000_add_two_factor_columns_to_users_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_04_145036_create_permissions_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_04_145959_create_roles_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeders/PermissionsSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/editHorsFrais.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="2d483989-2b58-4848-9ba1-ab8baf25fa69" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/Comptable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/Visiteur.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/template.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DefaultController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FicheController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FicheController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FraisController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FraisController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Fraisforfaitaire.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Fraisforfaitaire.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/HorsFrais.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/HorsFrais.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Remboursement.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Remboursement.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ListeVisitorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ListeVisitorController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Roles.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Roles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Fiche.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Fiche.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/ListeVisitor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ListeVisitor.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/editFrais.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/editFrais.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/editHorsFrais.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/editHorsFrais.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/frais.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frais.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
@@ -260,7 +249,8 @@
       <workItem from="1609245248499" duration="2958000" />
       <workItem from="1609421720315" duration="3833000" />
       <workItem from="1609762022636" duration="12837000" />
-      <workItem from="1609848038995" duration="351000" />
+      <workItem from="1609848038995" duration="7022000" />
+      <workItem from="1609857301073" duration="478000" />
     </task>
     <task id="LOCAL-00001" summary="Append default">
       <created>1607697080321</created>
@@ -297,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608040166894</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Append Authentification, editFrais">
+      <created>1609848443046</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1609848443046</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -308,7 +305,8 @@
     <MESSAGE value="Append change" />
     <MESSAGE value="Append FraisController" />
     <MESSAGE value="Append FicheController,ListeVisitorController, editFrais, Fiche,Frais" />
-    <option name="LAST_COMMIT_MESSAGE" value="Append FicheController,ListeVisitorController, editFrais, Fiche,Frais" />
+    <MESSAGE value="Append Authentification, editFrais" />
+    <option name="LAST_COMMIT_MESSAGE" value="Append Authentification, editFrais" />
   </component>
   <component name="WindowStateProjectService">
     <state x="97" y="107" width="1084" height="726" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607701363133">
@@ -320,15 +318,16 @@
     </state>
     <state x="347" y="133" width="584" height="641" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.27.1278.845@0.27.1278.845" timestamp="1607700967262" />
     <state x="347" y="133" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.27.1278.846@0.27.1278.846" timestamp="1608034974943" />
-    <state x="372" y="207" width="534" height="488" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609773140282">
-      <screen x="0" y="27" width="1278" height="846" />
+    <state x="373" y="239" width="534" height="488" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609853817520">
+      <screen x="0" y="27" width="1280" height="997" />
     </state>
-    <state x="372" y="207" width="534" height="488" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1278.845@0.27.1278.845" timestamp="1607700248534" />
+    <state x="372" y="207" width="534" height="488" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1278.845@0.27.1278.845" timestamp="1609849025907" />
     <state x="372" y="207" width="534" height="488" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1278.846@0.27.1278.846" timestamp="1609773140282" />
-    <state x="183" y="27" key="CommitChangelistDialog2" timestamp="1609771852055">
-      <screen x="0" y="27" width="1278" height="846" />
+    <state x="373" y="239" width="534" height="488" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1280.997@0.27.1280.997" timestamp="1609853817520" />
+    <state x="183" y="27" key="CommitChangelistDialog2" timestamp="1609848442508">
+      <screen x="0" y="27" width="1278" height="845" />
     </state>
-    <state x="183" y="27" key="CommitChangelistDialog2/0.27.1278.845@0.27.1278.845" timestamp="1607702306106" />
+    <state x="183" y="27" key="CommitChangelistDialog2/0.27.1278.845@0.27.1278.845" timestamp="1609848442508" />
     <state x="183" y="27" key="CommitChangelistDialog2/0.27.1278.846@0.27.1278.846" timestamp="1609771852055" />
     <state x="422" y="208" width="434" height="488" key="FileChooserDialogImpl" timestamp="1607958958280">
       <screen x="0" y="27" width="1278" height="846" />
@@ -343,19 +342,20 @@
       <screen x="0" y="27" width="1278" height="846" />
     </state>
     <state x="269" y="256" width="783" height="554" key="NewPhpClassDialog/0.27.1278.846@0.27.1278.846" timestamp="1607525451432" />
-    <state x="436" y="376" width="405" height="152" key="NewPhpFileDialog" timestamp="1609765023895">
-      <screen x="0" y="27" width="1278" height="846" />
+    <state x="437" y="438" width="405" height="152" key="NewPhpFileDialog" timestamp="1609852714503">
+      <screen x="0" y="27" width="1280" height="997" />
     </state>
     <state x="436" y="376" width="405" height="152" key="NewPhpFileDialog/0.27.1278.846@0.27.1278.846" timestamp="1609765023895" />
+    <state x="437" y="438" key="NewPhpFileDialog/0.27.1280.997@0.27.1280.997" timestamp="1609852714503" />
     <state x="128" y="84" width="1022" height="734" key="SettingsEditor" timestamp="1609766610448">
       <screen x="0" y="27" width="1278" height="846" />
     </state>
     <state x="128" y="84" width="1022" height="734" key="SettingsEditor/0.27.1278.845@0.27.1278.845" timestamp="1607698626299" />
     <state x="128" y="84" width="1022" height="734" key="SettingsEditor/0.27.1278.846@0.27.1278.846" timestamp="1609766610448" />
-    <state x="234" y="185" width="810" height="532" key="Vcs.Push.Dialog.v2" timestamp="1608040177212">
-      <screen x="0" y="27" width="1278" height="846" />
+    <state x="234" y="185" width="810" height="532" key="Vcs.Push.Dialog.v2" timestamp="1609848488418">
+      <screen x="0" y="27" width="1278" height="845" />
     </state>
-    <state x="234" y="185" width="810" height="532" key="Vcs.Push.Dialog.v2/0.27.1278.845@0.27.1278.845" timestamp="1607702318348" />
+    <state x="234" y="185" width="810" height="532" key="Vcs.Push.Dialog.v2/0.27.1278.845@0.27.1278.845" timestamp="1609848488418" />
     <state x="234" y="185" key="Vcs.Push.Dialog.v2/0.27.1278.846@0.27.1278.846" timestamp="1608040177212" />
   </component>
 </project>

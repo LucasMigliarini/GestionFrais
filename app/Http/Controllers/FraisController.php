@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Fraisforfaitaire;
 use App\Models\HorsFrais;
 use App\Models\Remboursement;
+use App\Models\Roles;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class FraisController extends Controller
 {
@@ -13,24 +15,40 @@ class FraisController extends Controller
 
         //$city = City::find($id)->paginate(15);
         $remboursement = Remboursement::find($id);
+        $id = Auth::user()->id;
+        $role = Roles::find($id);
+        $permission = $role->Rpermissions;
 
-        return view("frais",['remboursement'=>$remboursement]);
+        return view("frais",['remboursement'=>$remboursement],['permission'=>$permission]);
     }
 
-
+    public function showEditFraisForfaitaire($id){
+        $frais = Fraisforfaitaire::find($id);
+        $id = Auth::user()->id;
+        $role = Roles::find($id);
+        $permission = $role->Rpermissions;
+        return view("editFrais",['frais'=>$frais],['permission'=>$permission]);
+    }
 
     public function doEditFraisForfaitaire($id,Request $request){
         $remboursement = Remboursement::find($id);
         $frais = Fraisforfaitaire::find($id);
         $frais->situation = $request->get('situation');
         $frais->save();
-        return view("frais",['remboursement'=>$remboursement]);
+       /* $id = Auth::user()->id;
+        $role = Roles::find($id);
+        $permission = $role->Rpermissions;
+        return view("frais",['remboursement'=>$remboursement],['permission'=>$permission]);*/
+        return redirect()->route('showfrais', [$id]);
 
     }
 
     public function showEditHorsFrais($id){
         $frais = HorsFrais::find($id);
-        return view("editHorsFrais",['frais'=>$frais]);
+        $id = Auth::user()->id;
+        $role = Roles::find($id);
+        $permission = $role->Rpermissions;
+        return view("editHorsFrais",['frais'=>$frais],['permission'=>$permission]);
     }
 
     public function doEditHorsFrais($id,Request $request){
@@ -38,7 +56,11 @@ class FraisController extends Controller
         $frais = HorsFrais::find($id);
         $frais->situation = $request->get('situation');
         $frais->save();
-        return view("frais",['remboursement'=>$remboursement]);
+        /*$id = Auth::user()->id;
+        $role = Roles::find($id);
+        $permission = $role->Rpermissions;
+        return view("frais",['remboursement'=>$remboursement],['permission'=>$permission]);*/
+        return redirect()->route('showfrais', [$id]);
 
     }
 
@@ -70,6 +92,7 @@ class FraisController extends Controller
         else{
             $remboursement->etatCode = 2;
             $remboursement->save();
+            return redirect()->route('showuser');
         }
     }
 
