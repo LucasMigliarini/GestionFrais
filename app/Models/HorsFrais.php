@@ -11,4 +11,8 @@ class HorsFrais extends Model
     protected $table = 'horsfrais';
     protected $primaryKey = 'id';
     public $timestamps = false;
+
+    public function remboursement(){
+        return $this->belongsTo(Remboursement::class, 'id','rembCode');
+    }
 }

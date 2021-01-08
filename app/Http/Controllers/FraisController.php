@@ -13,53 +13,38 @@ class FraisController extends Controller
 {
     public function show($id){
 
-        //$city = City::find($id)->paginate(15);
         $remboursement = Remboursement::find($id);
         $id = Auth::user()->id;
         $role = Roles::find($id);
         $permission = $role->Rpermissions;
-
         return view("frais",['remboursement'=>$remboursement],['permission'=>$permission]);
     }
 
     public function showEditFraisForfaitaire($id){
         $frais = Fraisforfaitaire::find($id);
-        $id = Auth::user()->id;
-        $role = Roles::find($id);
-        $permission = $role->Rpermissions;
-        return view("editFrais",['frais'=>$frais],['permission'=>$permission]);
+        return view("editFrais",['frais'=>$frais]);
     }
 
     public function doEditFraisForfaitaire($id,Request $request){
-        $remboursement = Remboursement::find($id);
+
         $frais = Fraisforfaitaire::find($id);
         $frais->situation = $request->get('situation');
         $frais->save();
-       /* $id = Auth::user()->id;
-        $role = Roles::find($id);
-        $permission = $role->Rpermissions;
-        return view("frais",['remboursement'=>$remboursement],['permission'=>$permission]);*/
-        return redirect()->route('showfrais', [$id]);
+        $idremb = $frais->rembCode;
+        return redirect()->route('showfrais', [$idremb]);
 
     }
 
     public function showEditHorsFrais($id){
         $frais = HorsFrais::find($id);
-        $id = Auth::user()->id;
-        $role = Roles::find($id);
-        $permission = $role->Rpermissions;
-        return view("editHorsFrais",['frais'=>$frais],['permission'=>$permission]);
+
+        return view("editHorsFrais",['frais'=>$frais]);
     }
 
     public function doEditHorsFrais($id,Request $request){
-        $remboursement = Remboursement::find($id);
         $frais = HorsFrais::find($id);
         $frais->situation = $request->get('situation');
         $frais->save();
-        /*$id = Auth::user()->id;
-        $role = Roles::find($id);
-        $permission = $role->Rpermissions;
-        return view("frais",['remboursement'=>$remboursement],['permission'=>$permission]);*/
         return redirect()->route('showfrais', [$id]);
 
     }
@@ -87,12 +72,12 @@ class FraisController extends Controller
             }
         }
         if($temp1 == 0 or $temp2 == 0){
-            echo "Les frais ne sont pas tous traités";
+            return back()->with('error','Il manque des frais à traiter');
         }
         else{
             $remboursement->etatCode = 2;
             $remboursement->save();
-            return redirect()->route('showuser');
+            return redirect()->route('showuser')->with('success','La fiche a été acceptée');
         }
     }
 
@@ -119,11 +104,20 @@ class FraisController extends Controller
             }
         }
         if($temp1 == 0 or $temp2 == 0){
-            echo "Les frais ne sont pas tous traités";
+
+            return back()->with('error','Il manque des frais à traiter');
         }
         else{
             $remboursement->etatCode = 3;
             $remboursement->save();
+            return redirect()->route('showuser')->with('error','La fiche a été refusée');
         }
+    }
+
+    public function showVisitor($id){
+
+        $remboursement = Remboursement::find($id);
+
+        return view("fraisVisitor",['remboursement'=>$remboursement]);
     }
 }

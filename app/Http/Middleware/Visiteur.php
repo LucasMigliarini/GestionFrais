@@ -2,8 +2,10 @@
 
 namespace App\Http\Middleware;
 
+use App\Models\Roles;
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class Visiteur
 {
@@ -14,8 +16,17 @@ class Visiteur
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle(Request $request, Closure $next)
+    public function handle($request, Closure $next)
     {
-        return $next($request);
+        $id = Auth::user()->id;
+        $role = Roles::find($id);
+        $permission = $role->Rpermissions;
+
+        if ($permission == 3) {
+            return $next($request);
+        }
+        else {
+            return $next($request); //TODO mettre message erreur
+        }
     }
 }

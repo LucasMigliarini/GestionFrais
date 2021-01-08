@@ -9,10 +9,8 @@ use Illuminate\Support\Facades\Auth;
 class DefaultController extends Controller
 {
     public function show(){
-        $id = Auth::user()->id;
-        $role = Roles::find($id);
-        $permission = $role->Rpermissions;
-        return view("index",['permission'=>$permission]);
+
+        return view("index");
 
     }
 }

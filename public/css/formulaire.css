@@ -1,0 +1,20 @@
+.formulaire {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.formulaire2 {
+    display: flex;
+
+
+}
+
+.formulaire3 {
+    display: flex;
+
+}
+
+.button{
+    height: 1%;
+}

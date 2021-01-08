@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,7 +27,7 @@
 
     <!-- Custom Fonts -->
     <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
+    @yield('css')
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -61,7 +62,7 @@
                 <ul class="dropdown-menu dropdown-user">
                     <form role="form" action="/logout" method="POST">
                         @csrf
-                        <button type="submit" class="btn btn-primary">
+                        <i class="fa fa-sign-out fa-fw"></i><button type="submit" class="">
                             deconexion
                         </button>
                     </form>
@@ -87,14 +88,14 @@
                     <li>
                         <a href="/home" class="active"><i class="fa fa-dashboard fa-fw"></i> Acceuil</a>
                     </li>
-                    @if($permission == 1)
+                    @if(Auth::User()->roles->Rpermissions == 3)
                         <li>
-                            <a href="/showfrais/1"><i class="fa fa-table fa-fw"></i> Créer/Afficher</a>
+                            <a href="/showfichevisitor/{{Auth::user()->id}}"><i class="fa fa-table fa-fw"></i> Créer/Afficher</a>
                         </li>
                     @endif
-                    @if($permission == 2)
+                    @if(Auth::User()->roles->Rpermissions == 2)
                         <li>
-                            <a href="/showuser"><i class="fa fa-table fa-fw"></i> Valider/Afficher</a>
+                            <a href="/showfiche"><i class="fa fa-table fa-fw"></i> Valider/Afficher</a>
                         </li>
                     @endif
                 </ul>
@@ -122,14 +123,15 @@
 <!-- Metis Menu Plugin JavaScript -->
 <script src="../js/metisMenu.min.js"></script>
 
-<!-- Morris Charts JavaScript -->
-<script src="../js/raphael.min.js"></script>
-<script src="../js/morris.min.js"></script>
-<script src="../js/morris-data.js"></script>
+
+
+
 
 <!-- Custom Theme JavaScript -->
 <script src="../js/startmin.js"></script>
-
+@yield('js')
 </body>
 </html>
+
+
 

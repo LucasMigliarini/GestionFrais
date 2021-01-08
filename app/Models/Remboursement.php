@@ -14,13 +14,13 @@ class Remboursement extends Model
 
     public function remboursementFraisForfaitaire()
     {
-        return $this->hasMany('App\Models\Fraisforfaitaire', 'id');
+        return $this->hasMany('App\Models\Fraisforfaitaire', 'rembCode', 'id');
 
     }
 
     public function remboursmentHorsFrais()
     {
-        return $this->hasMany('App\Models\HorsFrais', 'id');
+        return $this->hasMany('App\Models\HorsFrais', 'rembCode','id');
 
     }
 

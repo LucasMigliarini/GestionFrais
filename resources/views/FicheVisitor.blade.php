@@ -17,7 +17,7 @@
                                 <!-- /.panel-heading -->
                                 <div class="panel-body">
                                     <div class="table-responsive">
-                                        <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                        <table class="table table-hover" id="dataTables-example">
                                             <thead>
                                                 <tr>
                                                     <th>id</th>
@@ -32,7 +32,7 @@
                                                     <td>{{$fiche->id}}</td>
                                                     <td>{{$fiche->User->name}}</td>
                                                     <td>{{$fiche->date}}</td>
-                                                    <td><a href="/showfrais/{{$fiche->id}}">{{$fiche->etat->libelle}}</a></td>
+                                                    <td><a href="/showfraisvisitor/{{$fiche->id}}">{{$fiche->etat->libelle}}</a></td>
                                                 </tr>
                                             @endforeach
                                             </tbody>
@@ -43,9 +43,10 @@
                             </div>
                             <!-- /.panel -->
                         </div>
+                        <a href="/shownewfiche/"><button type="submit" class="btn btn-success">Nouvelle fiche</button></a>
                         <!-- /.col-lg-12 -->
 @endsection
-                        @section('js')
+@section('js')
                             <script src="../js/jquery.min.js"></script>
 
                             <!-- Bootstrap Core JavaScript -->

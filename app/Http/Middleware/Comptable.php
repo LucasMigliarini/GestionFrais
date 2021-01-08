@@ -22,11 +22,11 @@ class Comptable
         $role = Roles::find($id);
         $permission = $role->Rpermissions;
 
-        if ($permission == 1) {
+        if ($permission == 2) {
             return $next($request);
         }
         else {
-            return $next($request);
+            
         }
     }
 }
