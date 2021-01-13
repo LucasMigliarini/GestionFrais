@@ -90,12 +90,27 @@
                     </li>
                     @if(Auth::User()->roles->Rpermissions == 3)
                         <li>
-                            <a href="/showfichevisitor/{{Auth::user()->id}}"><i class="fa fa-table fa-fw"></i> Créer/Afficher</a>
+                            <a href="/showfichevisitor/{{Auth::user()->id}}"><i class="fa fa-align-justify  fa-fw"></i> Afficher fiches</a>
+                        </li>
+                    @endif
+                    @if(Auth::User()->roles->Rpermissions == 3)
+                        <li>
+                            <a href="/shownewfiche"><i class="fa fa-edit fa-fw"></i> Nouvelle Fiche</a>
                         </li>
                     @endif
                     @if(Auth::User()->roles->Rpermissions == 2)
                         <li>
-                            <a href="/showfiche"><i class="fa fa-table fa-fw"></i> Valider/Afficher</a>
+                            <a href="/showfiche"><i class="fa fa-align-justify fa-fw"></i> Afficher fiches</a>
+                        </li>
+                    @endif
+                    @if(Auth::User()->roles->Rpermissions == 1)
+                        <li>
+                            <a href="/showusers"><i class="fa fa-align-justify  fa-fw"></i> Gestion utilisateur</a>
+                        </li>
+                    @endif
+                    @if(Auth::User()->roles->Rpermissions == 1)
+                        <li>
+                            <a href="/register"><i class="fa fa-edit fa-fw"></i> Créer utilisateur</a>
                         </li>
                     @endif
                 </ul>

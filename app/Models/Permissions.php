@@ -11,4 +11,10 @@ class Permissions extends Model
     protected $table = 'permissions';
     protected $primaryKey = 'id';
     public $timestamps = false;
+
+    public function roles()
+    {
+        return $this->hasMany('App\Models\Roles', 'Rpermissions', 'id');
+
+    }
 }

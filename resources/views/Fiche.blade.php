@@ -7,6 +7,7 @@
                         </div>
                         <!-- /.col-lg-12 -->
                     </div>
+                    @include('flash-message')
                     <!-- /.row -->
                     <div class="row">
                         <div class="col-lg-12">
@@ -32,7 +33,7 @@
                                                     <td>{{$fiche->id}}</td>
                                                     <td>{{$fiche->User->name}}</td>
                                                     <td>{{$fiche->date}}</td>
-                                                    <td><a href="/showfrais/{{$fiche->id}}">{{$fiche->etat->libelle}}</a></td>
+                                                    <td><a href="/showfrais/{{$fiche->id}}">{{$fiche->EtatFiche->libelle}}</a></td>
                                                 </tr>
                                             @endforeach
                                             </tbody>

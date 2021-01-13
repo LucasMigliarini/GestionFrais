@@ -53,7 +53,7 @@ class FraisController extends Controller
         $temp1=0;
         $temp2 =1;
         $remboursement = Remboursement::find($id);
-        foreach($remboursement->remboursementFraisForfaitaire as $fraisforfaitaire) {
+        foreach($remboursement->FraisForfaitaire as $fraisforfaitaire) {
             if($fraisforfaitaire != null) {
                 if ($fraisforfaitaire->situation == "En attente") {
                     $temp1 = 0;
@@ -62,7 +62,7 @@ class FraisController extends Controller
                 }
             }
         }
-        foreach($remboursement->remboursmentHorsFrais as $Horsfrais) {
+        foreach($remboursement->HorsFrais as $Horsfrais) {
             if($Horsfrais != null) {
                 if ($Horsfrais->situation == "En attente") {
                     $temp2 = 0;
@@ -77,7 +77,7 @@ class FraisController extends Controller
         else{
             $remboursement->etatCode = 2;
             $remboursement->save();
-            return redirect()->route('showuser')->with('success','La fiche a été acceptée');
+            return redirect()->route('showfiche')->with('success','La fiche a été acceptée');
         }
     }
 
@@ -85,7 +85,7 @@ class FraisController extends Controller
         $temp1=0;
         $temp2 =1;
         $remboursement = Remboursement::find($id);
-        foreach($remboursement->remboursementFraisForfaitaire as $fraisforfaitaire) {
+        foreach($remboursement->FraisForfaitaire as $fraisforfaitaire) {
             if($fraisforfaitaire != null) {
                 if ($fraisforfaitaire->situation == "En attente") {
                     $temp1 = 0;
@@ -94,7 +94,7 @@ class FraisController extends Controller
                 }
             }
         }
-        foreach($remboursement->remboursmentHorsFrais as $Horsfrais) {
+        foreach($remboursement->HorsFrais as $Horsfrais) {
             if($Horsfrais != null) {
                 if ($Horsfrais->situation == "En attente") {
                     $temp2 = 0;
@@ -110,7 +110,7 @@ class FraisController extends Controller
         else{
             $remboursement->etatCode = 3;
             $remboursement->save();
-            return redirect()->route('showuser')->with('error','La fiche a été refusée');
+            return redirect()->route('showfiche')->with('error','La fiche a été refusée');
         }
     }
 
@@ -120,4 +120,5 @@ class FraisController extends Controller
 
         return view("fraisVisitor",['remboursement'=>$remboursement]);
     }
+
 }

@@ -49,7 +49,7 @@ class User extends Authenticatable
 
     public function roles()
     {
-        return $this->hasone('App\Models\Roles', 'Rusers');
+        return $this->hasone('App\Models\Roles', 'Rusers', 'id');
 
     }
 }

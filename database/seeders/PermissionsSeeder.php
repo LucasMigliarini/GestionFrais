@@ -28,5 +28,10 @@ class PermissionsSeeder extends Seeder
             'id' => '3',
             'libelle' => 'visiteur',
         ]);
+
+        DB::table('permissions')->insert([
+            'id' => '4',
+            'libelle' => 'Aucun acces',
+        ]);
     }
 }

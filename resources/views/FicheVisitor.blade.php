@@ -4,9 +4,10 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <h1 class="page-header">Fiches</h1>
-                        </div>
+                            </div>
                         <!-- /.col-lg-12 -->
                     </div>
+                    @include('flash-message')
                     <!-- /.row -->
                     <div class="row">
                         <div class="col-lg-12">
@@ -32,7 +33,7 @@
                                                     <td>{{$fiche->id}}</td>
                                                     <td>{{$fiche->User->name}}</td>
                                                     <td>{{$fiche->date}}</td>
-                                                    <td><a href="/showfraisvisitor/{{$fiche->id}}">{{$fiche->etat->libelle}}</a></td>
+                                                    <td><a href="/showfraisvisitor/{{$fiche->id}}">{{$fiche->EtatFiche->libelle}}</a></td>
                                                 </tr>
                                             @endforeach
                                             </tbody>
@@ -43,7 +44,7 @@
                             </div>
                             <!-- /.panel -->
                         </div>
-                        <a href="/shownewfiche/"><button type="submit" class="btn btn-success">Nouvelle fiche</button></a>
+
                         <!-- /.col-lg-12 -->
 @endsection
 @section('js')

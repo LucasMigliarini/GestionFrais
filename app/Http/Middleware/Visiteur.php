@@ -19,6 +19,7 @@ class Visiteur
     public function handle($request, Closure $next)
     {
         $id = Auth::user()->id;
+
         $role = Roles::find($id);
         $permission = $role->Rpermissions;
 
@@ -26,7 +27,7 @@ class Visiteur
             return $next($request);
         }
         else {
-            return $next($request); //TODO mettre message erreur
+            return back()->with('error','Vous n avez pas accès à cette page');
         }
     }
 }

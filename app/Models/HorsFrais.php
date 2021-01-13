@@ -12,7 +12,7 @@ class HorsFrais extends Model
     protected $primaryKey = 'id';
     public $timestamps = false;
 
-    public function remboursement(){
+    public function Remboursement(){
         return $this->belongsTo(Remboursement::class, 'id','rembCode');
     }
 }

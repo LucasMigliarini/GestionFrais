@@ -17,4 +17,8 @@ class Fraisforfaitaire extends Model
         return $this->hasOne('App\Models\Frais','id','fraisCode');
     }
 
+    public function Remboursement(){
+        return $this->belongsTo(Remboursement::class, 'id','rembCode');
+    }
+
 }

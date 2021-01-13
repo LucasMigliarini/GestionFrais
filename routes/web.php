@@ -18,7 +18,7 @@ Route::get('/home', [\App\Http\Controllers\DefaultController::class, 'show'])->m
 Route::get('/', [\App\Http\Controllers\DefaultController::class, 'show'])->middleware('auth');
 //Comptabilité
 //Route::get('/showuser', [\App\Http\Controllers\ListeVisitorController::class, 'show'])->middleware('comptable')->name('showuser');
-Route::get('/showfiche/', [\App\Http\Controllers\FicheController::class, 'show'])->middleware('comptable');
+Route::get('/showfiche', [\App\Http\Controllers\FicheController::class, 'show'])->middleware('comptable')->name('showfiche');
 Route::get('/showfrais/{value}', [\App\Http\Controllers\FraisController::class, 'show'])->middleware('comptable')->name('showfrais');
 
 Route::get('/editfrais/{value}', [\App\Http\Controllers\FraisController::class, 'showEditFraisForfaitaire'])->middleware('comptable');
@@ -37,5 +37,11 @@ Route::get('/showfraisvisitor/{value}', [\App\Http\Controllers\FraisController::
 Route::get('/shownewfiche/', [\App\Http\Controllers\FicheController::class, 'newfiche'])->middleware('visiteur');
 Route::post('/newfrais/', [\App\Http\Controllers\FicheController::class, 'createFiche'])->middleware('visiteur');
 
+//Admin
+Route::get('/showusers', [\App\Http\Controllers\UsersController::class, 'show'])->middleware('admin')->name('showusers');
+Route::get('/edituser/{value}', [\App\Http\Controllers\UsersController::class, 'showEdituser'])->middleware('admin');
+Route::post('/doedituser/{value}', [\App\Http\Controllers\UsersController::class, 'doEdituser'])->middleware('admin');
+Route::get('/register', [\App\Http\Controllers\UsersController::class, 'showregister'])->middleware('admin')->name('register');
+Route::post('/doregister', [\App\Http\Controllers\UsersController::class, 'doregister'])->middleware('admin');
 
 

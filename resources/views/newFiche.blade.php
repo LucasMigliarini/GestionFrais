@@ -9,6 +9,7 @@
                             <h1 class="page-header">Validation</h1>
                         </div>
                     </div>
+                    @include('flash-message')
                         <!-- /.col-lg-12 -->
                         <div class="panel-body">
                             <div class="row">
@@ -18,30 +19,19 @@
                                         <div class="formulaire">
                                             <div class="form-group input-group col-lg-3">
                                                 <span class="input-group-addon">Nuitée</span>
-                                                <input type="text" class="form-control" placeholder="" name="nuitee">
+                                                <input type="number" value="0" min="0" max="30" class="form-control" placeholder="" name="nuitee">
                                             </div>
                                             <div class="form-group input-group col-lg-3">
                                                 <span class="input-group-addon">Repas</span>
-                                                <input type="text" class="form-control" placeholder="" name="repas">
+                                                <input type="number" value="0" min="0" max="60" class="form-control" placeholder="" name="repas">
                                             </div>
                                             <div class="form-group input-group col-lg-3">
                                                 <span class="input-group-addon">Km</span>
-                                                <input type="text" class="form-control" placeholder="" name="km">
+                                                <input type="number" value="0" min="0" class="form-control" placeholder="" name="km">
                                             </div>
                                         </div>
                                         <p>Hors Fraits</p><button id="btn+" type="button" class="btn btn-primary" onClick="addRow();">Ajouter</button><br><br>
-                                        <div class="formulaire2" id="formulaire2">
 
-                                            <div class="form-group input-group col-lg-2">
-                                                <span class="input-group-addon">Description</span>
-                                                <input type="text" class="form-control" placeholder="" name="description[]">
-                                            </div>
-                                            <div class="form-group input-group col-lg-2">
-                                                <span class="input-group-addon">Montant</span>
-                                                <input type="text" class="form-control" placeholder="" name="montant[]">
-                                            </div>
-
-                                        </div>
                                         <div id="content"></div>
 
                                         <button class="button" type="submit" class="btn btn-primary">Valider</button>
@@ -58,15 +48,15 @@
                 `
                         <div class="formulaire2" id="formulaire2">
 
-                                            <div class="form-group input-group col-lg-2">
+                                            <div class="form-group input-group col-lg-3">
                                                 <span class="input-group-addon">Description</span>
                                                 <input type="text" class="form-control" placeholder="" name="description[]">
                                             </div>
 
 
-                                            <div class="form-group input-group col-lg-2">
+                                            <div class="form-group input-group col-lg-3">
                                                 <span class="input-group-addon">Montant</span>
-                                                <input type="text" class="form-control" placeholder="" name="montant[]">
+                                                <input type="number" value="0" min="0" class="form-control" placeholder="" name="montant[]">
                                             </div>
 
                                             <button class="btn btn-primary button" type="button" onClick="removeRow(this);">Suppimer</button>

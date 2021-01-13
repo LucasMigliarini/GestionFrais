@@ -28,7 +28,7 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                            @foreach($remboursement->remboursementFraisForfaitaire as $fraisforfaitaire)
+                                            @foreach($remboursement->FraisForfaitaire as $fraisforfaitaire)
                                                 <tr class="odd gradeX">
                                                     <td>{{$fraisforfaitaire->date}}</td>
                                                     <td>{{$fraisforfaitaire->quantite}}</td>
@@ -70,7 +70,7 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            @foreach($remboursement->remboursmentHorsFrais as $horsfrais)
+                                            @foreach($remboursement->HorsFrais as $horsfrais)
                                                 <tr class="odd gradeX">
                                                     <td>{{$horsfrais->date}}</td>
                                                     <td>{{$horsfrais->montant}}</td>

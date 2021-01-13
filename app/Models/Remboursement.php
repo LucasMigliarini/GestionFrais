@@ -12,19 +12,19 @@ class Remboursement extends Model
     protected $primaryKey = 'id';
     public $timestamps = false;
 
-    public function remboursementFraisForfaitaire()
+    public function FraisForfaitaire()
     {
         return $this->hasMany('App\Models\Fraisforfaitaire', 'rembCode', 'id');
 
     }
 
-    public function remboursmentHorsFrais()
+    public function HorsFrais()
     {
         return $this->hasMany('App\Models\HorsFrais', 'rembCode','id');
 
     }
 
-    public function etat()
+    public function EtatFiche()
     {
         return $this->hasOne('App\Models\EtatFiche', 'id','etatCode');
 

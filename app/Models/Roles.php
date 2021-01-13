@@ -14,13 +14,13 @@ class Roles extends Model
 
     public function user()
     {
-        return $this->hasMany('App\Models\User', 'id');
+        return $this->hasMany('App\Models\User', 'id','Rusers');
 
     }
 
     public function permissions()
     {
-        return $this->hasMany('App\Models\Permissions', 'id');
+        return $this->hasOne('App\Models\Permissions', 'id', 'Rpermissions');
 
     }
 }

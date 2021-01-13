@@ -4,6 +4,7 @@
                         <div class="col-lg-12">
                             <h1 class="page-header">Validation</h1>
                         </div>
+                    @include('flash-message')
                         <!-- /.col-lg-12 -->
                         <div class="panel-body">
                             <div class="row">
