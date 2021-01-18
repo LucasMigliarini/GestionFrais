@@ -1,4 +1,3 @@
-
 @extends('template')
 @section('composer')
                     <div class="row">
@@ -28,9 +27,12 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                            @php
+                                                $i = 1
+                                            @endphp
                                             @foreach($remboursement as $fiche)
                                                 <tr class="odd gradeX">
-                                                    <td>{{$fiche->id}}</td>
+                                                    <td>{{$i++}}</td>
                                                     <td>{{$fiche->User->name}}</td>
                                                     <td>{{$fiche->date}}</td>
                                                     <td><a href="/showfraisvisitor/{{$fiche->id}}">{{$fiche->EtatFiche->libelle}}</a></td>

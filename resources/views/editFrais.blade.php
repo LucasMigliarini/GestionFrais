@@ -26,8 +26,8 @@
                                         <div class="form-group">
                                             <label>Situation</label>
                                             <select class="form-control" name="situation">
-                                                <option>Valider</option>
-                                                <option>Refuser</option>
+                                                <option>Validée</option>
+                                                <option>Refusée</option>
                                             </select>
                                         </div>
                                         <button type="submit" class="btn btn-primary">Valider</button>

@@ -12,7 +12,7 @@ class usersController extends Controller
     public function show(){
 
         //$city = City::find($id)->paginate(15);
-        $users = User::All();
+        $users = User::All()->where('name','!=','admin');
 
         return view("users",['users'=>$users]);
     }

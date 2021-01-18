@@ -9,6 +9,7 @@ use App\Models\Roles;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class FicheController extends Controller
 {
@@ -18,6 +19,14 @@ class FicheController extends Controller
         $remboursement = Remboursement::All()->where('etatCode','=',1);
 
         return view("Fiche",['remboursement'=>$remboursement]);
+    }
+
+    public function showall(){
+
+        //$city = City::find($id)->paginate(15);
+        $remboursement = Remboursement::All();
+
+        return view("AllFiche",['remboursement'=>$remboursement]);
     }
 
     public function showVisiteur($id){
@@ -30,7 +39,17 @@ class FicheController extends Controller
 
 
     public function newfiche(){
-        return view("newFiche");
+
+        $monthnow = Carbon::now()->format('m');
+        $yearnow = Carbon::now()->format('Y');
+        $user = Auth::user()->id;
+        $verif = Remboursement::whereYear('date','=',date('Y'))->whereMonth('date','=',date('m'))->where('utiMatricul','=',$user)->first();
+        //ddd($verif);
+        if(isset($verif)){
+            return back()->with('error','Vous avez déjà fait une fiche ce mois ci');
+        }else{
+            return view("newFiche");
+        }
     }
     public function createFiche(Request $request){
 
@@ -102,6 +121,7 @@ class FicheController extends Controller
             }
         }
 
+        return redirect()->route('showfichevisitor',Auth::user()->id)->with('success','La fiche a été crée');
 
 
     }

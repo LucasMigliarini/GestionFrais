@@ -100,7 +100,12 @@
                     @endif
                     @if(Auth::User()->roles->Rpermissions == 2)
                         <li>
-                            <a href="/showfiche"><i class="fa fa-align-justify fa-fw"></i> Afficher fiches</a>
+                            <a href="/showfiche"><i class="fa fa-align-justify fa-fw"></i> Afficher fiches en attentes</a>
+                        </li>
+                    @endif
+                    @if(Auth::User()->roles->Rpermissions == 2)
+                        <li>
+                            <a href="/showallfiche"><i class="fa fa-align-justify fa-fw"></i> Afficher toutes les fiches</a>
                         </li>
                     @endif
                     @if(Auth::User()->roles->Rpermissions == 1)

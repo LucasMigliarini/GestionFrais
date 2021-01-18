@@ -28,9 +28,12 @@
                             </tr>
                             </thead>
                             <tbody>
+                            @php
+                            $i = 1
+                            @endphp
                             @foreach($users as $user)
                                 <tr class="odd gradeX">
-                                    <td>{{$user->id}}</td>
+                                    <td>{{$i++}}</td>
                                     <td>{{$user->name}}</td>
                                     <td>{{$user->email}}</td>
                                     <td>{{$user->roles->permissions->libelle}}</td>

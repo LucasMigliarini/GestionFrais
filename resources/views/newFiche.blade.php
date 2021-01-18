@@ -15,22 +15,22 @@
                             <div class="row">
                                     <form role="form" action="/newfrais/" method="POST" >
                                         @csrf
-                                        <p>Fraits Forfaitaires</p>
+                                        <p>Frais Forfaitaires</p>
                                         <div class="formulaire">
                                             <div class="form-group input-group col-lg-3">
                                                 <span class="input-group-addon">Nuitée</span>
-                                                <input type="number" value="0" min="0" max="30" class="form-control" placeholder="" name="nuitee">
+                                                <input type="number" value="" min="1" max="30" class="form-control" placeholder="" name="nuitee">
                                             </div>
                                             <div class="form-group input-group col-lg-3">
                                                 <span class="input-group-addon">Repas</span>
-                                                <input type="number" value="0" min="0" max="60" class="form-control" placeholder="" name="repas">
+                                                <input type="number" value="" min="1" max="60" class="form-control" placeholder="" name="repas">
                                             </div>
                                             <div class="form-group input-group col-lg-3">
                                                 <span class="input-group-addon">Km</span>
-                                                <input type="number" value="0" min="0" class="form-control" placeholder="" name="km">
+                                                <input type="number" value="" min="1" class="form-control" placeholder="" name="km">
                                             </div>
                                         </div>
-                                        <p>Hors Fraits</p><button id="btn+" type="button" class="btn btn-primary" onClick="addRow();">Ajouter</button><br><br>
+                                        <p>Hors Frais</p><button id="btn+" type="button" class="btn btn-primary" onClick="addRow();">Ajouter</button><br><br>
 
                                         <div id="content"></div>
 

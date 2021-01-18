@@ -22,10 +22,10 @@
                                         <div class="form-group">
                                             <label>Role</label>
                                             <select class="form-control" name="Rpermissions">
-                                                <option>Admin</option>
-                                                <option>Visiteur</option>
-                                                <option>Comptable</option>
-                                                <option>Aucun acces</option>
+                                                <option @if($user->roles->permissions->libelle == "admin") selected @endif >Admin</option>
+                                                <option @if($user->roles->permissions->libelle == "visiteur") selected @endif>Visiteur</option>
+                                                <option @if($user->roles->permissions->libelle == "csomptable") selected @endif>Comptable</option>
+                                                <option @if($user->roles->permissions->libelle == "Aucun acces") selected @endif>Aucun acces</option>
                                             </select>
                                         </div>
                                         <button type="submit" class="btn btn-primary">Valider</button>
