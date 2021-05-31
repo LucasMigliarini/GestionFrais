@@ -17,11 +17,11 @@ class CreateFraisforfaitaireTable extends Migration
             $table->id();
             $table->date('date');
             $table->integer('quantite');
-            $table->integer('quantiteValide');
             $table->unsignedBigInteger('fraisCode');
             $table->unsignedBigInteger('rembCode');
             $table->foreign('fraisCode')->references('id')->on('frais');
             $table->foreign('rembCode')->references('id')->on('remboursement');
+            $table->string('situation');
         });
     }
 

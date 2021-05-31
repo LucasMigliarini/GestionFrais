@@ -17,25 +17,16 @@ class FraisSeeder extends Seeder
         DB::table('frais')->insert([
             'id' => '1',
             'libelle' => 'Etape',
-            'montant' => '50',
         ]);
 
         DB::table('frais')->insert([
             'id' => '2',
             'libelle' => 'Kilometrique',
-            'montant' => '250',
         ]);
 
         DB::table('frais')->insert([
             'id' => '3',
             'libelle' => 'Hotel',
-            'montant' => '350',
-        ]);
-
-        DB::table('frais')->insert([
-            'Code' => '4',
-            'libelle' => 'Repas',
-            'Montant' => '450',
         ]);
     }
 }

@@ -40,4 +40,16 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function ficheEnAttente()
+    {
+        return $this->hasMany('App\Models\Remboursement', 'etatCode');
+
+    }
+
+    public function roles()
+    {
+        return $this->hasone('App\Models\Roles', 'Rusers', 'id');
+
+    }
 }
