@@ -16,12 +16,12 @@ class DatabaseSeeder extends Seeder
         $this->call([
             EtatSeeder::class,
             FraisSeeder::class,
+            RemboursementSeeder::class,
             HorsFraisSeeder::class,
             UsersSeeder::class,
             FraisForfaitaireSeeder::class,
             PermissionsSeeder::class,
             RolesSeeder::class,
-            RemboursementSeeder::class,
           ]);
     }
 }
