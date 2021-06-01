@@ -22,5 +22,6 @@ class DatabaseSeeder extends Seeder
             PermissionsSeeder::class,
             RolesSeeder::class,
             RemboursementSeeder::class,
+          ]);
     }
 }
