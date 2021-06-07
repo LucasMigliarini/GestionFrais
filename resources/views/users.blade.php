@@ -39,8 +39,8 @@
                                     <td>{{$user->roles->permissions->libelle}}</td>
                                     <td><a href="/edituser/{{$user->id}}"><i class="fa fa-fw" aria-hidden="true" title="Copy to use pencil-square">&#xf14b</i></a></td>
                                 </tr>
-                            @endforeach
-                            </tbody>
+                    @endforeach
+                    </tbody>
                         </table>
                     </div>
                 </div>

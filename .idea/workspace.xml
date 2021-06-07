@@ -1,19 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d483989-2b58-4848-9ba1-ab8baf25fa69" name="Default Changelist" comment="Append page AllFiche">
-      <change afterPath="$PROJECT_DIR$/resources/views/AllFiche.blade.php" afterDir="false" />
+    <list default="true" id="2d483989-2b58-4848-9ba1-ab8baf25fa69" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FicheController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FicheController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Fiche.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Fiche.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/FicheVisitor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/FicheVisitor.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/editFrais.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/editFrais.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/editUser.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/editUser.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/newFiche.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/newFiche.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/template.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/template.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +199,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../foiegrassolution" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -257,7 +246,11 @@
       <workItem from="1610461577946" duration="3959000" />
       <workItem from="1610540819752" duration="10495000" />
       <workItem from="1610608428519" duration="642000" />
-      <workItem from="1610973553229" duration="603000" />
+      <workItem from="1610973553229" duration="827000" />
+      <workItem from="1610974412470" duration="117000" />
+      <workItem from="1610974951401" duration="646000" />
+      <workItem from="1612185065609" duration="113000" />
+      <workItem from="1612779900799" duration="26000" />
     </task>
     <task id="LOCAL-00001" summary="Append default">
       <created>1607697080321</created>
@@ -322,7 +315,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610541023123</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Append page AllFiche">
+      <created>1610974197572</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1610974197572</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -341,6 +341,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Append page AllFiche" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="665" y="288" width="588" height="343" key="#Notifications" timestamp="1610974330340">
+      <screen x="0" y="27" width="1918" height="861" />
+    </state>
+    <state x="665" y="288" width="588" height="343" key="#Notifications/0.27.1918.861@0.27.1918.861" timestamp="1610974330340" />
     <state x="97" y="107" width="1084" height="726" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607701363133">
       <screen x="0" y="27" width="1278" height="845" />
     </state>
@@ -357,17 +361,18 @@
     <state x="372" y="207" width="534" height="488" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1278.846@0.27.1278.846" timestamp="1609773140282" />
     <state x="373" y="239" width="534" height="488" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1280.997@0.27.1280.997" timestamp="1610379974720" />
     <state x="559" y="210" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1918.861@0.27.1918.861" timestamp="1609859161450" />
-    <state x="183" y="27" key="CommitChangelistDialog2" timestamp="1610541022441">
-      <screen x="0" y="27" width="1278" height="845" />
+    <state x="275" y="27" key="CommitChangelistDialog2" timestamp="1610974197214">
+      <screen x="0" y="27" width="1918" height="861" />
     </state>
     <state x="183" y="27" key="CommitChangelistDialog2/0.27.1278.845@0.27.1278.845" timestamp="1610541022441" />
     <state x="183" y="27" key="CommitChangelistDialog2/0.27.1278.846@0.27.1278.846" timestamp="1610118238157" />
-    <state x="275" y="27" key="CommitChangelistDialog2/0.27.1918.861@0.27.1918.861" timestamp="1609857861368" />
-    <state x="422" y="208" width="434" height="488" key="FileChooserDialogImpl" timestamp="1607958958280">
-      <screen x="0" y="27" width="1278" height="846" />
+    <state x="275" y="27" key="CommitChangelistDialog2/0.27.1918.861@0.27.1918.861" timestamp="1610974197214" />
+    <state x="634" y="252" width="434" height="488" key="FileChooserDialogImpl" timestamp="1612779927564">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="422" y="208" key="FileChooserDialogImpl/0.27.1278.845@0.27.1278.845" timestamp="1607699147109" />
     <state x="422" y="208" width="434" height="488" key="FileChooserDialogImpl/0.27.1278.846@0.27.1278.846" timestamp="1607958958280" />
+    <state x="634" y="252" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1612779927564" />
     <state x="439" y="371" width="400" height="161" key="Github.CreateGistDialog" timestamp="1607696812924">
       <screen x="0" y="27" width="1278" height="845" />
     </state>
@@ -386,12 +391,12 @@
     </state>
     <state x="128" y="84" width="1022" height="734" key="SettingsEditor/0.27.1278.845@0.27.1278.845" timestamp="1607698626299" />
     <state x="128" y="84" width="1022" height="734" key="SettingsEditor/0.27.1278.846@0.27.1278.846" timestamp="1609766610448" />
-    <state x="234" y="185" width="810" height="532" key="Vcs.Push.Dialog.v2" timestamp="1610541036600">
-      <screen x="0" y="27" width="1278" height="845" />
+    <state x="351" y="188" width="810" height="532" key="Vcs.Push.Dialog.v2" timestamp="1610974980155">
+      <screen x="0" y="27" width="1918" height="861" />
     </state>
     <state x="234" y="185" width="810" height="532" key="Vcs.Push.Dialog.v2/0.27.1278.845@0.27.1278.845" timestamp="1610541036600" />
     <state x="234" y="185" width="810" height="532" key="Vcs.Push.Dialog.v2/0.27.1278.846@0.27.1278.846" timestamp="1610118262494" />
-    <state x="351" y="188" key="Vcs.Push.Dialog.v2/0.27.1918.861@0.27.1918.861" timestamp="1609857869606" />
+    <state x="351" y="188" width="810" height="532" key="Vcs.Push.Dialog.v2/0.27.1918.861@0.27.1918.861" timestamp="1610974980155" />
     <state x="299" y="239" key="run.anything.popup" timestamp="1609947105433">
       <screen x="0" y="27" width="1280" height="997" />
     </state>

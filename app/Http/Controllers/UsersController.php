@@ -23,7 +23,7 @@ class usersController extends Controller
         return view("editUser",['user'=>$user]);
     }
 
-    public function doEdituser($id,Request $request)
+public function doEdituser($id,Request $request)
     {
 
         $role = Roles::find($id);

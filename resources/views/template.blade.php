@@ -118,6 +118,11 @@
                             <a href="/register"><i class="fa fa-edit fa-fw"></i> Créer utilisateur</a>
                         </li>
                     @endif
+                    @if(Auth::User()->roles->Rpermissions == 2)
+                        <li>
+                            <a href="/allfrais"><i class="fa fa-edit fa-fw"></i> Voir Somme des frais</a>
+                        </li>
+                    @endif
                 </ul>
             </div>
         </div>

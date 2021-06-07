@@ -30,6 +30,8 @@ Route::post('/doedithorsfrais/{value}', [\App\Http\Controllers\FraisController::
 Route::get('/veriffrais/{value}', [\App\Http\Controllers\FraisController::class, 'validerFiche'])->middleware('comptable');
 Route::get('/verifefrais/{value}', [\App\Http\Controllers\FraisController::class, 'refuserFiche'])->middleware('comptable');
 
+Route::get('/allfrais', [\App\Http\Controllers\FraisController::class, 'showAllFrais'])->middleware('comptable');
+
 
 //Visiteur
 Route::get('/showfichevisitor/{value}', [\App\Http\Controllers\FicheController::class, 'showVisiteur'])->middleware('visiteur')->name('showfichevisitor');
